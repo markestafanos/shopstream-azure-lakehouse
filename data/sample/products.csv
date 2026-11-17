@@ -1,0 +1,51 @@
+product_id,product_name,category,unit_price,unit_cost
+P0001,Wireless Earbuds,electronics,69.01,45.86
+P0002,Wireless Earbuds v2,electronics,244.41,127.05
+P0003,Wireless Earbuds v3,electronics,41.1,24.58
+P0004,Wireless Earbuds v4,electronics,89.69,48.74
+P0005,Wireless Earbuds v5,electronics,281.95,211.29
+P0006,Mechanical Keyboard,electronics,229.55,105.48
+P0007,Mechanical Keyboard v2,electronics,27.92,18.85
+P0008,Mechanical Keyboard v3,electronics,40.16,21.28
+P0009,Mechanical Keyboard v4,electronics,105.65,64.76
+P0010,Mechanical Keyboard v5,electronics,47.69,34.28
+P0011,Mechanical Keyboard v6,electronics,64.02,36.14
+P0012,USB-C Hub,electronics,35.42,24.1
+P0013,USB-C Hub v2,electronics,63.73,43.42
+P0014,USB-C Hub v3,electronics,122.93,82.52
+P0015,Webcam,electronics,51.65,34.64
+P0016,Webcam v2,electronics,30.29,19.68
+P0017,Webcam v3,electronics,53.8,30.49
+P0018,Portable SSD,electronics,360.22,179.24
+P0019,Portable SSD v2,electronics,244.98,164.97
+P0020,Portable SSD v3,electronics,163.67,79.65
+P0021,Portable SSD v4,electronics,136.88,73.87
+P0022,Portable SSD v5,electronics,95.39,44.42
+P0023,Smartwatch,electronics,383.08,199.5
+P0024,Smartwatch v2,electronics,119.83,54.47
+P0025,Smartwatch v3,electronics,279.23,174.63
+P0026,Smartwatch v4,electronics,106.77,55.83
+P0027,Bluetooth Speaker,electronics,176.82,116.21
+P0028,Bluetooth Speaker v2,electronics,225.44,111.93
+P0029,Bluetooth Speaker v3,electronics,266.76,139.95
+P0030,Air Fryer,home-kitchen,29.84,18.97
+P0031,Air Fryer v2,home-kitchen,356.97,267.4
+P0032,Air Fryer v3,home-kitchen,196.06,91.74
+P0033,Air Fryer v4,home-kitchen,204.87,135.3
+P0034,Air Fryer v5,home-kitchen,277.67,135.43
+P0035,Air Fryer v6,home-kitchen,59.64,44.4
+P0036,Coffee Grinder,home-kitchen,285.22,165.89
+P0037,Coffee Grinder v2,home-kitchen,50.23,32.99
+P0038,Coffee Grinder v3,home-kitchen,94.69,46.44
+P0039,Coffee Grinder v4,home-kitchen,337.77,201.17
+P0040,Coffee Grinder v5,home-kitchen,121.0,65.15
+P0041,Knife Set,home-kitchen,49.51,25.05
+P0042,Knife Set v2,home-kitchen,91.44,61.24
+P0043,Knife Set v3,home-kitchen,70.65,49.41
+P0044,Knife Set v4,home-kitchen,347.14,213.96
+P0045,Knife Set v5,home-kitchen,26.03,12.92
+P0046,Knife Set v6,home-kitchen,76.23,40.33
+P0047,Blender,home-kitchen,126.91,86.65
+P0048,Blender v2,home-kitchen,146.3,98.04
+P0049,Blender v3,home-kitchen,328.59,208.96
+P0050,Blender v4,home-kitchen,96.53,61.4

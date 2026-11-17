@@ -1,0 +1,21 @@
+customer_id,name,email,city,country,signup_date,signup_channel,phone,street_address,postcode,date_of_birth
+C00809,Ava Kumar,ava.kumar809@example.com,Toronto,CA,2025-07-02,email,0480 191 891,207 Pacific Hwy,2356,1972-01-24
+C00773,Divya Kumar,divya.kumar773@example.com,San Francisco,US,2025-04-20,paid_search,0486 701 949,196 Pacific Hwy,2701,1988-07-01
+C00308,Aditya Garcia,aditya.garcia308@example.com,Berlin,DE,2025-10-15,referral,0428 549 991,292 Bondi Rd,2674,1986-04-05
+C00881,Liam Gupta,liam.gupta881@example.com,San Francisco,US,2025-09-17,organic,0449 631 309,207 Bondi Rd,2377,1983-06-17
+C00296,Ava Singh,ava.singh296@example.com,London,GB,2025-11-05,social,0468 598 965,173 Bondi Rd,2465,2000-07-04
+C00608,Meera Smith,meera.smith608@example.com,Bengaluru,IN,2025-05-03,email,0470 373 215,124 Pacific Hwy,2087,1986-11-06
+C00413,Emma Gupta,emma.gupta413@example.com,Bengaluru,IN,2025-10-24,email,0436 217 806,24 Pacific Hwy,2120,1991-04-02
+C00156,Amelia Johnson,amelia.johnson156@example.com,London,GB,2025-10-02,email,0428 756 925,235 Pacific Hwy,2413,1996-10-12
+C00761,Rohan Singh,rohan.singh761@example.com,Sydney,AU,2025-01-10,social,0454 110 906,87 Liverpool St,2539,1962-01-11
+C00895,Wei Tanaka,wei.tanaka895@example.com,San Francisco,US,2025-04-19,paid_search,0464 296 255,262 Bondi Rd,2018,1967-02-09
+C00526,Isha Anderson,isha.anderson526@example.com,Mumbai,IN,2025-12-15,paid_search,0457 144 834,203 Liverpool St,2544,1962-12-25
+C00802,Pooja Chen,pooja.chen802@example.com,Chennai,IN,2025-06-27,organic,0433 392 218,59 Macquarie St,2754,1980-08-15
+C00555,Arjun Martinez,arjun.martinez555@example.com,New York,US,2025-07-06,referral,0433 540 441,160 Bondi Rd,2693,1962-06-04
+C00145,Pooja Tanaka,pooja.tanaka145@example.com,Pune,IN,2025-12-19,email,0425 151 294,218 Pacific Hwy,2374,1983-09-28
+C00337,Diego Miller,diego.miller337@example.com,Chennai,IN,2025-03-16,referral,0474 785 121,73 Elizabeth St,2084,1985-08-21
+C00436,Pooja Mehta,pooja.mehta436@example.com,Berlin,DE,2025-10-28,organic,0477 346 678,169 Liverpool St,2015,1967-04-06
+C00289,Wei Wilson,wei.wilson289@example.com,Delhi,IN,2025-01-15,organic,0433 925 817,108 Macquarie St,2401,1996-06-13
+C00751,Arjun Nair,arjun.nair751@example.com,Chennai,IN,2025-07-19,referral,0418 577 800,160 Pacific Hwy,2635,2002-02-28
+C00053,Sneha Brown,sneha.brown53@example.com,Mumbai,IN,2025-01-19,referral,0465 627 513,262 Macquarie St,2353,1982-06-03
+C00007,Ava Kumar,ava.kumar7@example.com,Bengaluru,IN,2025-07-04,social,0418 677 161,28 Elizabeth St,2740,2003-09-14

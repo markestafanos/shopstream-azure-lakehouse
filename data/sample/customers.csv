@@ -1,0 +1,51 @@
+customer_id,name,email,city,country,signup_date,signup_channel,phone,street_address,postcode,date_of_birth
+C00001,Divya Sharma,divya.sharma1@example.com,Singapore,SG,2025-05-08,paid_search,0451 254 504,167 George St,2074,1994-02-12
+C00002,Arjun Kumar,arjun.kumar2@example.com,Berlin,DE,2025-12-18,organic,0484 159 619,55 George St,2088,1987-07-03
+C00003,Amelia Patel,amelia.patel3@example.com,Mumbai,IN,2025-02-07,paid_search,0440 192 664,109 George St,2579,1967-04-21
+C00004,Priya Anderson,priya.anderson4@example.com,Hyderabad,IN,2025-12-21,email,0490 696 163,148 Parramatta Rd,2050,1974-01-18
+C00005,Mason Mehta,mason.mehta5@example.com,San Francisco,US,2025-10-09,organic,0427 396 529,37 Pitt St,2584,1979-09-27
+C00006,Rohan Davis,rohan.davis6@example.com,Chennai,IN,2025-05-05,paid_search,0497 285 205,149 Oxford St,2381,1966-09-23
+C00007,Ava Kumar,ava.kumar7@example.com,Bengaluru,IN,2025-07-04,social,0418 677 161,159 Oxford St,2508,2003-09-14
+C00008,Ethan Lopez,ethan.lopez8@example.com,Pune,IN,2025-01-24,referral,0450 576 699,237 Military Rd,2370,1979-04-26
+C00009,Divya Miller,divya.miller9@example.com,Bengaluru,IN,2025-09-10,email,0433 815 898,63 Pitt St,2588,1979-09-16
+C00010,Sophia Martinez,sophia.martinez10@example.com,Hyderabad,IN,2025-12-03,organic,0453 846 559,74 Pitt St,2120,1992-07-06
+C00011,Nikhil Johnson,nikhil.johnson11@example.com,Bengaluru,IN,2025-04-28,organic,0453 255 600,108 George St,2684,1964-09-19
+C00012,Lucas Smith,lucas.smith12@example.com,San Francisco,US,2025-11-27,social,0450 448 811,90 Military Rd,2593,1989-02-27
+C00013,Rohan Garcia,rohan.garcia13@example.com,Chennai,IN,2025-04-22,social,0421 376 585,179 Pitt St,2062,2004-05-21
+C00014,Vikram Lopez,vikram.lopez14@example.com,Berlin,DE,2025-03-18,paid_search,0483 797 941,115 Crown St,2733,1984-11-12
+C00015,Rohan Chen,rohan.chen15@example.com,New York,US,2025-05-21,email,0412 572 463,44 Pitt St,2505,1963-04-25
+C00016,Nikhil Brown,nikhil.brown16@example.com,Sydney,AU,2025-01-08,organic,0446 232 856,64 Parramatta Rd,2400,1991-02-06
+C00017,Noah Miller,noah.miller17@example.com,Pune,IN,2025-02-07,email,0467 511 662,72 King St,2440,1995-05-23
+C00018,Noah Nair,noah.nair18@example.com,Berlin,DE,2025-08-13,referral,0463 467 799,227 Parramatta Rd,2236,1969-02-06
+C00019,Meera Smith,meera.smith19@example.com,Delhi,IN,2025-04-24,email,0429 337 774,60 George St,2496,1997-03-09
+C00020,James Martinez,james.martinez20@example.com,New York,US,2025-10-13,social,0446 104 249,108 Victoria Rd,2624,1996-06-05
+C00021,Nikhil Gupta,nikhil.gupta21@example.com,Austin,US,2025-08-03,organic,0498 979 627,244 George St,2467,2003-09-13
+C00022,Divya Gupta,divya.gupta22@example.com,Berlin,DE,2025-03-26,referral,0460 508 503,27 Military Rd,2649,1985-01-07
+C00023,Vikram Miller,vikram.miller23@example.com,New York,US,2025-10-15,email,0418 313 551,42 Pitt St,2348,1998-01-04
+C00024,James Anderson,james.anderson24@example.com,Sydney,AU,2025-01-22,organic,0410 680 254,138 Pitt St,2372,1999-01-03
+C00025,Emma Brown,emma.brown25@example.com,Bengaluru,IN,2025-05-14,paid_search,0436 728 485,39 Crown St,2355,1998-06-16
+C00026,Lucia Sharma,lucia.sharma26@example.com,Singapore,SG,2025-12-09,email,0425 218 969,125 Military Rd,2491,1990-05-03
+C00027,Isha Wilson,isha.wilson27@example.com,Dubai,AE,2025-02-28,social,0428 204 867,88 Crown St,2490,2004-03-17
+C00028,Aditya Gupta,aditya.gupta28@example.com,Chennai,IN,2025-03-18,email,0412 310 640,93 King St,2706,1994-01-25
+C00029,Aarav Lopez,aarav.lopez29@example.com,Chennai,IN,2025-08-01,organic,0477 405 758,222 Pitt St,2712,1976-09-12
+C00030,Sophia Johnson,sophia.johnson30@example.com,Hyderabad,IN,2025-01-08,email,0431 464 890,58 Victoria Rd,2651,1974-10-26
+C00031,Ananya Singh,ananya.singh31@example.com,Singapore,SG,2025-08-27,organic,0434 925 345,210 Parramatta Rd,2757,1974-04-17
+C00032,Arjun Gupta,arjun.gupta32@example.com,Berlin,DE,2025-08-18,paid_search,0473 464 848,8 George St,2286,1990-05-07
+C00033,James Wilson,james.wilson33@example.com,Sydney,AU,2025-10-14,paid_search,0498 719 452,115 Victoria Rd,2373,1965-04-04
+C00034,Aditya Johnson,aditya.johnson34@example.com,New York,US,2025-11-21,social,0439 581 301,87 Oxford St,2494,1999-10-27
+C00035,Diego Wilson,diego.wilson35@example.com,San Francisco,US,2025-02-08,paid_search,0410 590 768,89 Pitt St,2676,1967-07-26
+C00036,Vikram Brown,vikram.brown36@example.com,Mumbai,IN,2025-10-18,paid_search,0435 589 282,112 Victoria Rd,2088,1985-08-13
+C00037,Nikhil Sharma,nikhil.sharma37@example.com,Bengaluru,IN,2025-12-21,organic,0420 842 262,44 King St,2028,1969-10-15
+C00038,Nikhil Singh,nikhil.singh38@example.com,Dubai,AE,2025-01-28,social,0493 249 726,212 Military Rd,2673,1982-03-18
+C00039,Vikram Wilson,vikram.wilson39@example.com,Hyderabad,IN,2025-05-22,referral,0480 234 121,4 Pitt St,2539,1968-07-28
+C00040,Pooja Anderson,pooja.anderson40@example.com,Delhi,IN,2025-12-19,email,0434 945 994,55 George St,2257,1973-05-17
+C00041,Wei Mehta,wei.mehta41@example.com,Toronto,CA,2025-08-26,referral,0440 882 700,84 Crown St,2557,1986-03-02
+C00042,Aditya Kumar,aditya.kumar42@example.com,Bengaluru,IN,2025-11-14,social,0455 569 778,150 Parramatta Rd,2513,1968-09-05
+C00043,Amelia Davis,amelia.davis43@example.com,San Francisco,US,2025-12-02,organic,0477 622 119,224 Military Rd,2187,1998-01-25
+C00044,Sneha Miller,sneha.miller44@example.com,Singapore,SG,2025-06-26,organic,0429 276 244,122 Pitt St,2569,1963-06-22
+C00045,Riya Nair,riya.nair45@example.com,Hyderabad,IN,2025-09-15,paid_search,0476 643 668,124 Pitt St,2573,1963-04-07
+C00046,Amelia Reddy,amelia.reddy46@example.com,Pune,IN,2025-08-08,organic,0445 143 890,26 Military Rd,2575,1961-02-15
+C00047,Diego Anderson,diego.anderson47@example.com,Bengaluru,IN,2025-01-21,email,0451 727 617,156 Oxford St,2709,1977-08-17
+C00048,Aarav Singh,aarav.singh48@example.com,Dubai,AE,2025-04-06,referral,0478 926 589,130 Oxford St,2715,1993-05-18
+C00049,Yuki Tanaka,yuki.tanaka49@example.com,Hyderabad,IN,2025-07-02,paid_search,0435 960 558,36 Parramatta Rd,2124,1985-08-11
+C00050,Lucas Sharma,lucas.sharma50@example.com,New York,US,2025-05-26,referral,0419 787 346,110 Pitt St,2217,2002-05-26
