@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "adf-shopstream-dev"
+        },
+        "ls_adls_shopstream_properties_typeProperties_url": {
+            "value": "https://stshopstreamdev.dfs.core.windows.net/"
+        },
+        "tr_daily_inbox_to_raw_properties_pl_inbox_to_raw_parameters_target_folder": {
+            "value": "raw"
+        }
+    }
+}

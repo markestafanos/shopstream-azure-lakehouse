@@ -1,0 +1,201 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "type": "string",
+            "metadata": "Data Factory name",
+            "defaultValue": "adf-shopstream-dev"
+        },
+        "ls_adls_shopstream_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://stshopstreamdev.dfs.core.windows.net/"
+        },
+        "tr_daily_inbox_to_raw_properties_pl_inbox_to_raw_parameters_target_folder": {
+            "type": "string",
+            "defaultValue": "raw"
+        }
+    },
+    "variables": {
+        "factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+    },
+    "resources": [
+        {
+            "name": "[concat(parameters('factoryName'), '/ds_inbox')]",
+            "type": "Microsoft.DataFactory/factories/datasets",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "linkedServiceName": {
+                    "referenceName": "ls_adls_shopstream",
+                    "type": "LinkedServiceReference"
+                },
+                "annotations": [],
+                "type": "Binary",
+                "typeProperties": {
+                    "location": {
+                        "type": "AzureBlobFSLocation",
+                        "folderPath": "source",
+                        "fileSystem": "landing"
+                    }
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/linkedServices/ls_adls_shopstream')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/ds_raw')]",
+            "type": "Microsoft.DataFactory/factories/datasets",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "linkedServiceName": {
+                    "referenceName": "ls_adls_shopstream",
+                    "type": "LinkedServiceReference"
+                },
+                "parameters": {
+                    "folder": {
+                        "type": "string",
+                        "defaultValue": "raw"
+                    }
+                },
+                "annotations": [],
+                "type": "Binary",
+                "typeProperties": {
+                    "location": {
+                        "type": "AzureBlobFSLocation",
+                        "folderPath": {
+                            "value": "@dataset().folder",
+                            "type": "Expression"
+                        },
+                        "fileSystem": "landing"
+                    }
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/linkedServices/ls_adls_shopstream')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/ls_adls_shopstream')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('ls_adls_shopstream_properties_typeProperties_url')]"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/pl_inbox_to_raw')]",
+            "type": "Microsoft.DataFactory/factories/pipelines",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "activities": [
+                    {
+                        "name": "copy_inbox_to_raw",
+                        "type": "Copy",
+                        "dependsOn": [],
+                        "policy": {
+                            "timeout": "0.12:00:00",
+                            "retry": 0,
+                            "retryIntervalInSeconds": 30,
+                            "secureOutput": false,
+                            "secureInput": false
+                        },
+                        "userProperties": [],
+                        "typeProperties": {
+                            "source": {
+                                "type": "BinarySource",
+                                "storeSettings": {
+                                    "type": "AzureBlobFSReadSettings",
+                                    "recursive": true,
+                                    "wildcardFolderPath": "source",
+                                    "wildcardFileName": "*.csv",
+                                    "deleteFilesAfterCompletion": true
+                                },
+                                "formatSettings": {
+                                    "type": "BinaryReadSettings"
+                                }
+                            },
+                            "sink": {
+                                "type": "BinarySink",
+                                "storeSettings": {
+                                    "type": "AzureBlobFSWriteSettings",
+                                    "copyBehavior": "PreserveHierarchy"
+                                }
+                            },
+                            "enableStaging": false
+                        },
+                        "inputs": [
+                            {
+                                "referenceName": "ds_inbox",
+                                "type": "DatasetReference",
+                                "parameters": {}
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "referenceName": "ds_raw",
+                                "type": "DatasetReference",
+                                "parameters": {
+                                    "folder": "@pipeline().parameters.target_folder"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "policy": {
+                    "elapsedTimeMetric": {}
+                },
+                "parameters": {
+                    "target_folder": {
+                        "type": "string",
+                        "defaultValue": "raw"
+                    }
+                },
+                "annotations": [],
+                "lastPublishTime": "2026-11-17T08:33:28Z"
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/datasets/ds_inbox')]",
+                "[concat(variables('factoryId'), '/datasets/ds_raw')]"
+            ]
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/tr_daily_inbox_to_raw')]",
+            "type": "Microsoft.DataFactory/factories/triggers",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "runtimeState": "Started",
+                "pipelines": [
+                    {
+                        "pipelineReference": {
+                            "referenceName": "pl_inbox_to_raw",
+                            "type": "PipelineReference"
+                        },
+                        "parameters": {
+                            "target_folder": "[parameters('tr_daily_inbox_to_raw_properties_pl_inbox_to_raw_parameters_target_folder')]"
+                        }
+                    }
+                ],
+                "type": "ScheduleTrigger",
+                "typeProperties": {
+                    "recurrence": {
+                        "frequency": "Day",
+                        "interval": 1,
+                        "startTime": "2026-11-18T05:50:00",
+                        "timeZone": "AUS Eastern Standard Time",
+                        "schedule": {}
+                    }
+                }
+            },
+            "dependsOn": [
+                "[concat(variables('factoryId'), '/pipelines/pl_inbox_to_raw')]"
+            ]
+        }
+    ]
+}
