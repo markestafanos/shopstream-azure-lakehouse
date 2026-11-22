@@ -15,7 +15,7 @@ AS SELECT
   current_timestamp()        AS _ingested_at
 FROM STREAM read_files('/Volumes/${catalog}/bronze/events/orders_stream', format => 'json');
 
-CREATE OR REFRESH MATERIALIZED VIEW shopstream_dev.silver.order_events
+CREATE OR REFRESH MATERIALIZED VIEW ${catalog}.silver.order_events
 COMMENT 'Live orders, deduplicated and shaped like silver.orders'
 AS SELECT
   order_id, customer_id, product_id, quantity, unit_price,
