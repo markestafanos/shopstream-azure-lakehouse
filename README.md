@@ -10,21 +10,21 @@ An end-to-end e-commerce data platform on **Azure Databricks with Unity Catalog*
 
 ```mermaid
 flowchart LR
-    subgraph Azure
-        INBOX[(landing/inbox)] -->|ADF copy, 06:00 daily| RAW[(landing/raw)]
-        GEN[Event generator] -->|JSON files| EVT[(landing/events)]
+    subgraph AZ["Azure"]
+        INBOX[("landing/inbox")] -->|"ADF copy, 06:00 daily"| RAW[("landing/raw")]
+        GEN["Event generator"] -->|"JSON files"| EVT[("landing/events")]
     end
 
-    subgraph Databricks["Databricks Job · 06:30 daily · Serverless"]
-        RAW -->|COPY INTO| B[bronze.orders / customers / products]
-        B --> S[silver.orders · products · customers SCD2]
-        EVT -->|Auto Loader · Lakeflow pipeline + expectations| SE[bronze → silver.order_events]
-        S --> Q{quality_checks}
+    subgraph DBX["Databricks Job - 06:30 daily - Serverless"]
+        RAW -->|"COPY INTO"| B["bronze: orders, customers, products"]
+        B --> S["silver: orders, products, customers SCD2"]
+        EVT -->|"Auto Loader + expectations"| SE["bronze to silver: order_events"]
+        S --> Q{"quality_checks"}
         SE --> Q
-        Q -->|pass| G[gold.daily_revenue · category_performance · customer_ltv]
+        Q -->|"pass"| G["gold: daily_revenue, category_performance, customer_ltv"]
     end
 
-    G --> D[AI/BI Dashboard]
+    G --> D["AI/BI Dashboard"]
 ```
 
 ### Job DAG
