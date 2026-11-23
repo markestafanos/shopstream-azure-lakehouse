@@ -1,0 +1,39 @@
+resources:
+  jobs:
+    shopstream_daily:
+      name: shopstream_daily
+      max_concurrent_runs: 1
+      parameters:
+        - name: catalog
+          default: ${var.catalog}
+      schedule:
+        quartz_cron_expression: "0 30 6 * * ?"
+        timezone_id: Australia/Sydney
+        pause_status: ${var.schedule_status}
+      tasks:
+        - task_key: bronze_batch
+          notebook_task:
+            notebook_path: ../src/notebooks/01_bronze_batch.ipynb
+
+        - task_key: silver
+          depends_on:
+            - task_key: bronze_batch
+          notebook_task:
+            notebook_path: ../src/notebooks/02_silver.ipynb
+
+        - task_key: order_events
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.order_events.id}
+
+        - task_key: quality_checks
+          depends_on:
+            - task_key: silver
+            - task_key: order_events
+          notebook_task:
+            notebook_path: ../src/notebooks/06_quality_checks.ipynb
+
+        - task_key: gold
+          depends_on:
+            - task_key: quality_checks
+          notebook_task:
+            notebook_path: ../src/notebooks/03_gold.ipynb

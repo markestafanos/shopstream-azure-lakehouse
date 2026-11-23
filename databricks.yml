@@ -1,0 +1,32 @@
+bundle:
+  name: shopstream
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Unity Catalog catalog the job and pipeline write to
+  schedule_status:
+    description: PAUSED or UNPAUSED for the daily 06:30 schedule
+    default: PAUSED
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-7405618499281209.9.azuredatabricks.net
+    variables:
+      catalog: shopstream_dev
+
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-7405618499281209.9.azuredatabricks.net
+      root_path: /Workspace/Users/mest0958@uni.sydney.edu.au/.bundle/${bundle.name}/prod
+    run_as:
+      user_name: mest0958@uni.sydney.edu.au
+    variables:
+      catalog: shopstream_prod
+      schedule_status: PAUSED
